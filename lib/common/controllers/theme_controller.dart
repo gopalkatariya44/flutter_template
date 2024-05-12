@@ -6,9 +6,9 @@ class ThemeController extends GetxController {
 
   @override
   void onInit() {
-    if (box.read(AppConstants.appTheme) == AppConstants.dark) {
+    if (box.read(AppStorageKey.appTheme) == AppStorageKey.dark) {
       themeMode.value = ThemeMode.dark;
-    } else if (box.read(AppConstants.appTheme) == AppConstants.light) {
+    } else if (box.read(AppStorageKey.appTheme) == AppStorageKey.light) {
       themeMode.value = ThemeMode.light;
     } else {
       themeMode.value = ThemeMode.system;
@@ -20,15 +20,15 @@ class ThemeController extends GetxController {
     switch (mode) {
       case ThemeModeSetting.light:
         themeMode.value = ThemeMode.light;
-        box.write(AppConstants.appTheme, AppConstants.light);
+        box.write(AppStorageKey.appTheme, AppStorageKey.light);
         break;
       case ThemeModeSetting.dark:
         themeMode.value = ThemeMode.dark;
-        box.write(AppConstants.appTheme, AppConstants.dark);
+        box.write(AppStorageKey.appTheme, AppStorageKey.dark);
         break;
       case ThemeModeSetting.system:
         themeMode.value = ThemeMode.system;
-        box.write(AppConstants.appTheme, AppConstants.system);
+        box.write(AppStorageKey.appTheme, AppStorageKey.system);
         break;
     }
   }

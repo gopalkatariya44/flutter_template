@@ -1,5 +1,6 @@
+import 'package:flutter_template/common/controllers/language_controller.dart';
+import 'package:flutter_template/common/models/language.dart';
 import 'package:flutter_template/features/detail_page.dart';
-import 'package:flutter_template/utils/app_theme_data.dart';
 
 import 'common_imports.dart';
 import 'features/home_page.dart';
@@ -7,7 +8,8 @@ import 'common/controllers/theme_controller.dart';
 
 void main() async {
   await GetStorage.init();
-  runApp(MyApp());
+  await Languages.initTranslations();
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeController = Get.put(ThemeController());
+    final languageController = Get.put(LanguageController());
     return Obx(
       () => GetMaterialApp(
         debugShowCheckedModeBanner: false,
@@ -28,6 +31,8 @@ class MyApp extends StatelessWidget {
           GetPage(name: '/', page: () => HomePage()),
           GetPage(name: '/details', page: () => const DetailPage()),
         ],
+        locale: languageController.localLanguage.value,
+        translations: Languages(),
       ),
     );
   }

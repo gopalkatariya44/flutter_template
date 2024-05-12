@@ -3,3 +3,9 @@ enum ThemeModeSetting {
   dark,
   system,
 }
+
+enum LanguageSetting {
+  en,
+  gu,
+  hi,
+}
