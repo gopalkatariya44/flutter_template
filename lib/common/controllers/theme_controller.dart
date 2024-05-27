@@ -2,6 +2,7 @@ import '../../common_imports.dart';
 
 class ThemeController extends GetxController {
   var themeMode = ThemeMode.system.obs;
+  var themeModeTemp = ThemeMode.system.obs;
   GetStorage box = GetStorage();
 
   @override
@@ -12,21 +13,26 @@ class ThemeController extends GetxController {
       themeMode.value = ThemeMode.light;
     } else {
       themeMode.value = ThemeMode.system;
+      box.write(AppStorageKey.appTheme, AppStorageKey.system);
     }
     super.onInit();
   }
 
-  void setThemeMode(ThemeModeSetting mode) {
-    switch (mode) {
-      case ThemeModeSetting.light:
+  String getThemeString() {
+    return box.read(AppStorageKey.appTheme);
+  }
+
+  void setThemeMode() {
+    switch (themeModeTemp.value) {
+      case ThemeMode.light:
         themeMode.value = ThemeMode.light;
         box.write(AppStorageKey.appTheme, AppStorageKey.light);
         break;
-      case ThemeModeSetting.dark:
+      case ThemeMode.dark:
         themeMode.value = ThemeMode.dark;
         box.write(AppStorageKey.appTheme, AppStorageKey.dark);
         break;
-      case ThemeModeSetting.system:
+      case ThemeMode.system:
         themeMode.value = ThemeMode.system;
         box.write(AppStorageKey.appTheme, AppStorageKey.system);
         break;

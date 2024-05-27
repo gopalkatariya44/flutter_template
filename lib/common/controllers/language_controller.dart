@@ -1,38 +1,54 @@
 import '/common_imports.dart';
 
 class LanguageController extends GetxController {
+  // if you modify the list add Language jason to assets/translations/
+
   var localLanguage = Get.deviceLocale.obs;
   var box = GetStorage();
 
-  @override
-  void onInit() {
-    if (box.read(AppStorageKey.appLanguage) == AppStorageKey.en) {
-      localLanguage.value = const Locale(AppStorageKey.en, AppStorageKey.US);
-    } else if (box.read(AppStorageKey.appLanguage) == AppStorageKey.hi) {
-      localLanguage.value = const Locale(AppStorageKey.hi, AppStorageKey.IN);
-    } else if (box.read(AppStorageKey.appLanguage) == AppStorageKey.gu) {
-      localLanguage.value = const Locale(AppStorageKey.gu, AppStorageKey.IN);
-    } else {
-      localLanguage.value = Get.deviceLocale;
+  String getLanguageName() {
+    switch (localLanguage.value!.languageCode) {
+      case AppStorageKey.en:
+        return 'english';
+      case AppStorageKey.hi:
+        return 'hindi';
+      case AppStorageKey.gu:
+        return 'gujarati';
     }
-    super.onInit();
+    return "";
   }
 
   void setLanguage(LanguageSetting mode) {
     switch (mode) {
       case LanguageSetting.en:
-        localLanguage.value = const Locale(AppStorageKey.en, AppStorageKey.US);
+        localLanguage.value = AppConstants.enInLocal;
         box.write(AppStorageKey.appLanguage, AppStorageKey.en);
         break;
       case LanguageSetting.hi:
-        localLanguage.value = const Locale(AppStorageKey.hi, AppStorageKey.IN);
+        localLanguage.value = AppConstants.hiInLocal;
         box.write(AppStorageKey.appLanguage, AppStorageKey.hi);
         break;
       case LanguageSetting.gu:
-        localLanguage.value = const Locale(AppStorageKey.gu, AppStorageKey.IN);
+        localLanguage.value = AppConstants.guInLocal;
         box.write(AppStorageKey.appLanguage, AppStorageKey.gu);
         break;
     }
-    Get.updateLocale(localLanguage.value as Locale);
+    Get.updateLocale(localLanguage.value!);
+    Get.back();
+  }
+
+  @override
+  void onInit() {
+    if (box.read(AppStorageKey.appLanguage) == AppStorageKey.en) {
+      localLanguage.value = AppConstants.enInLocal;
+    } else if (box.read(AppStorageKey.appLanguage) == AppStorageKey.hi) {
+      localLanguage.value = AppConstants.hiInLocal;
+    } else if (box.read(AppStorageKey.appLanguage) == AppStorageKey.gu) {
+      localLanguage.value = AppConstants.guInLocal;
+    } else {
+      localLanguage.value = Get.deviceLocale;
+      box.write(AppStorageKey.appLanguage, AppStorageKey.en);
+    }
+    super.onInit();
   }
 }

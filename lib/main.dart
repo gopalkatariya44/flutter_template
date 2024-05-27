@@ -1,10 +1,8 @@
-import 'package:flutter_template/common/controllers/language_controller.dart';
-import 'package:flutter_template/common/models/language.dart';
-import 'package:flutter_template/features/detail_page.dart';
-
+import 'common/controllers/language_controller.dart';
 import 'common_imports.dart';
 import 'features/home_page.dart';
 import 'common/controllers/theme_controller.dart';
+import 'features/settings/pages/settings_page.dart';
 
 void main() async {
   await GetStorage.init();
@@ -29,7 +27,7 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         getPages: [
           GetPage(name: '/', page: () => HomePage()),
-          GetPage(name: '/details', page: () => const DetailPage()),
+          GetPage(name: '/settings', page: () => SettingsPage()),
         ],
         locale: languageController.localLanguage.value,
         translations: Languages(),

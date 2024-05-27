@@ -1,5 +1,7 @@
 {
-    "title": "Hello, World!",
-    "welcome_message": "Welcome to my app!"
+  "title": "Hello, World!",
+  "welcome_message": "Welcome to my app!",
+  "english": "English",
+  "hindi": "Hindi",
+  "gujarati": "Gujarati"
 }
-  

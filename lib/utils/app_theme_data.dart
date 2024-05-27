@@ -18,6 +18,8 @@ class AppThemeData {
       contentPadding: EdgeInsets.all(15),
       border: OutlineInputBorder(),
     ),
+    bottomSheetTheme:
+        const BottomSheetThemeData(backgroundColor: Color(0xFF2C2C2C)),
     useMaterial3: true,
   );
 
@@ -38,6 +40,9 @@ class AppThemeData {
     inputDecorationTheme: const InputDecorationTheme(
       contentPadding: EdgeInsets.all(15),
       border: OutlineInputBorder(),
+    ),
+    bottomSheetTheme: const BottomSheetThemeData(
+      backgroundColor: Color(0xFFECE5DD),
     ),
   );
 }
