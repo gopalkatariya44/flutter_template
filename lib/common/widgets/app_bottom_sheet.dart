@@ -32,6 +32,7 @@ class AppBottomSheet {
             color: Colors.grey,
           ),
           content!,
+          const SizedBox(height: 10)
         ],
       ),
       backgroundColor: Get.isDarkMode

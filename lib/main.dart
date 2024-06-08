@@ -1,8 +1,7 @@
 import 'common_imports.dart';
-import 'features/home_page.dart';
+import 'constants/app_page_routes.dart';
 import 'features/settings/controllers/language_controller.dart';
 import 'features/settings/controllers/theme_controller.dart';
-import 'features/settings/pages/settings_page.dart';
 
 void main() async {
   await GetStorage.init();
@@ -20,15 +19,12 @@ class MyApp extends StatelessWidget {
     return Obx(
       () => GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'app_name',
+        title: 'app_name'.tr,
         darkTheme: AppThemeData.dark,
         theme: AppThemeData.light,
         themeMode: themeController.themeMode.value,
-        initialRoute: '/',
-        getPages: [
-          GetPage(name: '/', page: () => HomePage()),
-          GetPage(name: '/settings', page: () => SettingsPage()),
-        ],
+        initialRoute: AppPageRoute.initialRoute,
+        getPages: AppGetPages.list,
         locale: languageController.localLanguage.value,
         translations: Languages(),
       ),

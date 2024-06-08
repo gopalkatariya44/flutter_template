@@ -1,7 +1,10 @@
-import 'settings/controllers/language_controller.dart';
-import 'settings/controllers/theme_controller.dart';
+import 'package:flutter_template/constants/app_page_routes.dart';
+import 'package:flutter_template/features/home/controllers/home_controller.dart';
 
-import '../common_imports.dart';
+import '../settings/controllers/language_controller.dart';
+import '../settings/controllers/theme_controller.dart';
+
+import '../../common_imports.dart';
 
 class UserProvider extends GetConnect {
   Future<Response> getUser(int id) =>
@@ -13,6 +16,7 @@ class HomePage extends StatelessWidget {
   HomePage({super.key});
   final themeController = Get.put(ThemeController());
   final languageController = Get.put(LanguageController());
+  final homeController = Get.put(HomeController());
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +26,12 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {
-                Get.toNamed('/settings');
+                Get.toNamed(AppPageRoute.home);
               },
               icon: const Icon(Icons.person))
         ],
       ),
-      body: Column(),
+      body: const Column(children: []),
     );
   }
 }

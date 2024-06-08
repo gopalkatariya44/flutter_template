@@ -1,6 +1,6 @@
 import '/common_imports.dart';
 
-class LanguageController extends GetxController {
+class LanguageController extends AppController {
   // if you modify the list add Language jason to assets/translations/
 
   var localLanguage = Get.deviceLocale.obs;

@@ -1,6 +1,6 @@
 import '../../../common_imports.dart';
 
-class ThemeController extends GetxController {
+class ThemeController extends AppController {
   var themeMode = ThemeMode.system.obs;
   var themeModeIndex = 0.obs;
   var themeModeIndexTemp = 0.obs;
