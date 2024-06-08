@@ -1,5 +1,5 @@
-import '../common/controllers/language_controller.dart';
-import '/common/controllers/theme_controller.dart';
+import 'settings/controllers/language_controller.dart';
+import 'settings/controllers/theme_controller.dart';
 
 import '../common_imports.dart';
 
@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("title".tr),
+        title: Text("app_name".tr),
         actions: [
           IconButton(
               onPressed: () {

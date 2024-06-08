@@ -1,7 +1,16 @@
 {
-  "title": "હેલો, વિશ્વ!",
+  "app_name": "ટેમ્પ્લેટ",
   "welcome_message": "મારી એપ માં આપનું સ્વાગત છે!",
   "english": "અંગ્રેજી",
   "hindi": "હિન્દી",
-  "gujarati": "ગુજરાતી"
+  "gujarati": "ગુજરાતી",
+  "settings": "સેટિંગ્સ",
+  "app_language": "એપની ભાષા",
+  "choose_theme": "થીમ પસંદ કરો",
+  "light": "લાઈટ",
+  "dark": "કાળું",
+  "system_default": "સિસ્ટમ ડિફોલ્ટ",
+  "cancle": "રદ કરો",
+  "ok": "ઓકે",
+  "theme": "થીમ"
 }

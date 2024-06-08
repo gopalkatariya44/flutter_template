@@ -1,7 +1,16 @@
 {
-  "title": "नमस्ते, दुनिया!",
+  "app_name": "टेम्पलेट",
   "welcome_message": "मेरे ऐप में आपका स्वागत है!",
   "english": "अंग्रेज़ी",
   "hindi": "हिंदी",
-  "gujarati": "गुजराती"
+  "gujarati": "गुजराती",
+  "settings": "सेटिंग्स",
+  "app_language": "ऐप की भाषा",
+  "choose_theme": "थीम चुनें",
+  "light": "लाइट",
+  "dark": "डार्क",
+  "system_default": "सिस्टम डिफ़ॉल्ट",
+  "cancle": "कैंसिल करें",
+  "ok": "ठीक है",
+  "theme": "थीम"
 }

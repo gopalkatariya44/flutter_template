@@ -8,27 +8,11 @@ void main() async {
   // output: {"hey_there": "Hey there"}
   List translationsList = [
     [
-      "english",
+      "app name",
       {
-        'en': 'English',
-        'gu': 'અંગ્રેજી',
-        'hi': 'अंग्रेज़ी',
-      }
-    ],
-    [
-      "Hindi",
-      {
-        'en': 'Hindi',
-        'gu': 'હિન્દી',
-        'hi': 'हिंदी',
-      },
-    ],
-    [
-      "Gujarati",
-      {
-        'en': 'Gujarati',
-        'gu': 'ગુજરાતી',
-        'hi': 'गुजराती',
+        'en': 'Template',
+        'gu': 'ટેમ્પ્લેટ',
+        'hi': 'टेम्पलेट',
       }
     ],
   ];
@@ -68,3 +52,77 @@ Future<void> addLocalization(
     print('Updated $filePath with key "$key" and value "$value"');
   }
 }
+
+
+// [
+//       "Settings",
+//       {
+//         'en': 'Settings',
+//         'gu': 'સેટિંગ્સ',
+//         'hi': 'सेटिंग्स',
+//       }
+//     ],
+//     [
+//       "App language",
+//       {
+//         'en': 'App language',
+//         'gu': 'એપની ભાષા',
+//         'hi': 'ऐप की भाषा',
+//       }
+//     ],
+//     [
+//       "Choose Theme",
+//       {
+//         'en': 'Choose Theme',
+//         'gu': 'થીમ પસંદ કરો',
+//         'hi': 'थीम चुनें',
+//       }
+//     ],
+//     [
+//       "Light",
+//       {
+//         'en': 'Light',
+//         'gu': 'લાઈટ',
+//         'hi': 'लाइट',
+//       }
+//     ],
+//     [
+//       "Dark",
+//       {
+//         'en': 'Dark',
+//         'gu': 'કાળું',
+//         'hi': 'डार्क',
+//       }
+//     ],
+//     [
+//       "system default",
+//       {
+//         'en': 'System default',
+//         'gu': 'સિસ્ટમ ડિફોલ્ટ',
+//         'hi': 'सिस्टम डिफ़ॉल्ट',
+//       }
+//     ],
+//     [
+//       "Cancle",
+//       {
+//         'en': 'Cancle',
+//         'gu': 'રદ કરો',
+//         'hi': 'कैंसिल करें',
+//       }
+//     ],
+//     [
+//       "Ok",
+//       {
+//         'en': 'Ok',
+//         'gu': 'ઓકે',
+//         'hi': 'ठीक है',
+//       }
+//     ],
+//     [
+//       "Theme",
+//       {
+//         'en': 'Theme',
+//         'gu': 'થીમ',
+//         'hi': 'थीम',
+//       }
+//     ],

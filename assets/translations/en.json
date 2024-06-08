@@ -1,7 +1,16 @@
 {
-  "title": "Hello, World!",
+  "app_name": "Template",
   "welcome_message": "Welcome to my app!",
   "english": "English",
   "hindi": "Hindi",
-  "gujarati": "Gujarati"
+  "gujarati": "Gujarati",
+  "settings": "Settings",
+  "app_language": "App language",
+  "choose_theme": "Choose Theme",
+  "light": "Light",
+  "dark": "Dark",
+  "system_default": "System default",
+  "cancle": "Cancle",
+  "ok": "Ok",
+  "theme": "Theme"
 }

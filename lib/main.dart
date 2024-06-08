@@ -1,7 +1,7 @@
-import 'common/controllers/language_controller.dart';
 import 'common_imports.dart';
 import 'features/home_page.dart';
-import 'common/controllers/theme_controller.dart';
+import 'features/settings/controllers/language_controller.dart';
+import 'features/settings/controllers/theme_controller.dart';
 import 'features/settings/pages/settings_page.dart';
 
 void main() async {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return Obx(
       () => GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Template',
+        title: 'app_name',
         darkTheme: AppThemeData.dark,
         theme: AppThemeData.light,
         themeMode: themeController.themeMode.value,
