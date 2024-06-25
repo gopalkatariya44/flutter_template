@@ -8,11 +8,19 @@ void main() async {
   // output: {"hey_there": "Hey there"}
   List translationsList = [
     [
-      "app name",
+      "Hello",
       {
-        'en': 'Template',
-        'gu': 'ટેમ્પ્લેટ',
-        'hi': 'टेम्पलेट',
+        'en': 'Hello',
+        'gu': 'નમસ્તે',
+        'hi': 'नमस्ते',
+      }
+    ],
+    [
+      "guys",
+      {
+        'en': 'Guys',
+        'gu': 'દોસ્તો',
+        'hi': 'दोस्तो',
       }
     ],
   ];

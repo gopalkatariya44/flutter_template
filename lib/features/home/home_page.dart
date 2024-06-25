@@ -1,10 +1,8 @@
-import 'package:flutter_template/constants/app_page_routes.dart';
-import 'package:flutter_template/features/home/controllers/home_controller.dart';
-
 import '../settings/controllers/language_controller.dart';
 import '../settings/controllers/theme_controller.dart';
 
 import '../../common_imports.dart';
+import 'controllers/home_controller.dart';
 
 class UserProvider extends GetConnect {
   Future<Response> getUser(int id) =>

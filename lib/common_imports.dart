@@ -8,6 +8,7 @@ export 'constants/app_storage_key.dart';
 export 'constants/app_images.dart';
 export 'constants/app_enums.dart';
 export 'constants/app_files.dart';
+export 'constants/app_page_routes.dart';
 
 // utils
 export 'utils/app_colors.dart';
