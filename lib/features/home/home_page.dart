@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {
-                Get.toNamed(AppPageRoute.home);
+                Get.toNamed(AppPageRoute.settings);
               },
               icon: const Icon(Icons.person))
         ],
