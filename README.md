@@ -1,16 +1,33 @@
 # flutter_template
 
-A new Flutter project.
+### Clone Flutter Template
 
-## Getting Started
+```sh
+git clone https://github.com/gopalkatariya44/flutter_template.git
+```
 
-This project is a starting point for a Flutter application.
+### Change the App Name and Bundle Id in project
 
-A few resources to get you started if this is your first Flutter project:
+```sh
+flutter pub get
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```sh
+flutter pub global activate rename
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```sh
+rename getAppName --targets ios,android
+```
+
+```sh
+rename setAppName --targets ios,android --value "appname"
+```
+
+```sh
+rename getBundleId --targets ios,android
+```
+
+```sh
+rename setBundleId --targets ios,android --value "com.example.appname"
+```
